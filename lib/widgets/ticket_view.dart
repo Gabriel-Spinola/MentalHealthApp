@@ -97,7 +97,83 @@ class TicketView extends StatelessWidget {
               ),
             ),
             // Card orange part
-            Container(),
+            Container(
+              color: Styles.orangeColor,
+              child: Row(
+                children: <Widget>[
+                  const SizedBox(
+                    width: 10.0,
+                    height: 20.0,
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(topRight: Radius.circular(10.0), bottomRight: Radius.circular(10.0)),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: LayoutBuilder(
+                        builder: (BuildContext context, BoxConstraints constraints) {
+                          return Flex(
+                            direction: Axis.horizontal,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            mainAxisSize: MainAxisSize.max,
+                            children: List.generate(
+                              (constraints.constrainWidth() / 15).floor(),
+                              (index) =>
+                              const SizedBox(
+                                width: 5.0,
+                                height: 1.0,
+                                child: DecoratedBox(
+                                  decoration: BoxDecoration(color: Colors.white)
+                                ),
+                              )
+                            )
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 10.0,
+                    height: 20.0,
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(topLeft: Radius.circular(10.0), bottomLeft: Radius.circular(10.0)),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            // Bottom part of the orange card
+            Container(
+              padding: const EdgeInsets.all(16.0),
+              decoration: BoxDecoration(
+                color: Styles.orangeColor,
+                borderRadius: const BorderRadius.only(
+                  bottomLeft: Radius.circular(21.0),
+                  bottomRight: Radius.circular(21.0),
+                ),
+              ),
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      Column(
+                        children: <Widget>[
+                          Text('1 MAY', style: Styles.headLine3Style.copyWith(color: Colors.white)),
+                          Text('DATE', style: Styles.headLine4Style.copyWith(color: Colors.white)),
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
