@@ -2,6 +2,7 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:mental_health_application2/widgets/ticket_view.dart';
 
 import '../routes/app_routes.dart';
 import '../Widgets/bottom_bar.dart';
@@ -82,7 +83,8 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
-          
+          const Gap(15.0),
+          const TicketView(),
         ],
       ),
       bottomNavigationBar: const BottomBar(),
