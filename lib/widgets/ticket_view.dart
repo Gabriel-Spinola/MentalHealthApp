@@ -151,7 +151,7 @@ class TicketView extends StatelessWidget {
             ),
             // Bottom part of the orange card
             Container(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.only(left: 16.0, top: 10.0, right: 16.0, bottom: 16.0),
               decoration: BoxDecoration(
                 color: Styles.orangeColor,
                 borderRadius: const BorderRadius.only(
@@ -162,11 +162,30 @@ class TicketView extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text('1 MAY', style: Styles.headLine3Style.copyWith(color: Colors.white)),
-                          Text('DATE', style: Styles.headLine4Style.copyWith(color: Colors.white)),
+                          const Gap(5.0),
+                          Text('Date', style: Styles.headLine4Style.copyWith(color: Colors.white)),
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Text('08:00 AM', style: Styles.headLine3Style.copyWith(color: Colors.white)),
+                          const Gap(5.0),
+                          Text('Departure Time', style: Styles.headLine4Style.copyWith(color: Colors.white)),
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: <Widget>[
+                          Text('23', style: Styles.headLine3Style.copyWith(color: Colors.white)),
+                          const Gap(5.0),
+                          Text('Number', style: Styles.headLine4Style.copyWith(color: Colors.white)),
                         ],
                       )
                     ],
