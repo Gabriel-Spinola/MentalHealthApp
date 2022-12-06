@@ -2,6 +2,7 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:mental_health_application2/widgets/card_view.dart';
 import 'package:mental_health_application2/widgets/ticket_view.dart';
 
 import '../routes/app_routes.dart';
@@ -71,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text('Upcoming Flights', style: Styles.headLine2Style),
+                    Text('Consultorias', style: Styles.headLine2Style),
                     InkWell(
                       child: Text('View All', style: Styles.textStyle.copyWith(color: Styles.primaryColor)),
                       onTap: () {
@@ -91,6 +92,34 @@ class _HomeScreenState extends State<HomeScreen> {
               children: const <Widget>[
                 TicketView(),
                 TicketView(),
+              ],
+            )
+          ),
+          const Gap(15.0),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text('Aprenda', style: Styles.headLine2Style),
+                InkWell(
+                  child: Text('View All', style: Styles.textStyle.copyWith(color: Styles.primaryColor)),
+                  onTap: () {
+                    print('tapped');
+                  },
+                ),
+              ],
+            ),
+          ),
+          const Gap(15.0),
+          SingleChildScrollView(
+            padding: const EdgeInsets.only(left: 20.0),
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: const <Widget>[
+                CardsView(),
+                CardsView(),
+                CardsView(),
               ],
             )
           ),
