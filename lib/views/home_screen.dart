@@ -84,7 +84,16 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           const Gap(15.0),
-          const TicketView(),
+          SingleChildScrollView(
+            padding: const EdgeInsets.only(left: 20.0),
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: const <Widget>[
+                TicketView(),
+                TicketView(),
+              ],
+            )
+          ),
         ],
       ),
       bottomNavigationBar: const BottomBar(),
