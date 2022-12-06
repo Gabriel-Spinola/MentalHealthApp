@@ -6,7 +6,9 @@ import 'package:mental_health_application2/utils/app_layout.dart';
 import '../utils/app_styles.dart';
 
 class CardsView extends StatelessWidget {
-  const CardsView({Key? key}) : super(key: key);
+  final Map<String, dynamic> card;
+
+  const CardsView({Key? key, required this.card}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,18 +37,18 @@ class CardsView extends StatelessWidget {
             decoration: BoxDecoration(
               color: Styles.primaryColor,
               borderRadius: BorderRadius.circular(12.0),
-              image: const DecorationImage(
+              image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage('assets/images/one.png')
+                image: AssetImage('assets/images/${card['image']}')
               ),
             ),
           ),
           const Gap(10.0),
-          Text('Open Space', style: Styles.headLine2Style.copyWith(color: Styles.kakiColor)),
+          Text('${card['place']}', style: Styles.headLine2Style.copyWith(color: Styles.kakiColor)),
           const Gap(5.0),
-          Text('London', style: Styles.headLine3Style.copyWith(color: Colors.white)),
+          Text('${card['destination']}', style: Styles.headLine3Style.copyWith(color: Colors.white)),
           const Gap(8.0),
-          Text('\$40/night', style: Styles.headLine1Style.copyWith(color: Styles.kakiColor)),
+          Text('\$${card['price']}/night', style: Styles.headLine1Style.copyWith(color: Styles.kakiColor)),
         ]
       ),
     );

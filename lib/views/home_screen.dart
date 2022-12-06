@@ -2,6 +2,7 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:mental_health_application2/utils/app_info_list.dart';
 import 'package:mental_health_application2/widgets/card_view.dart';
 import 'package:mental_health_application2/widgets/ticket_view.dart';
 
@@ -116,11 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: const EdgeInsets.only(left: 20.0),
             scrollDirection: Axis.horizontal,
             child: Row(
-              children: const <Widget>[
-                CardsView(),
-                CardsView(),
-                CardsView(),
-              ],
+              children: cardsList.map((card) => CardsView(card: card)).toList(),
             )
           ),
         ],
