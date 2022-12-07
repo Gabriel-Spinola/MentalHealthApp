@@ -17,20 +17,20 @@ class TicketView extends StatelessWidget {
 
     return SizedBox(
       width: layoutSize.width * 0.9,
-      height: 200.0,
+      height: AppLayout.getHeight(200.0),
       child: Container(
-        margin: const EdgeInsets.only(right: 16.0),
+        margin: EdgeInsets.only(right: AppLayout.getHeight(16.0)),
         // Contains whole card
         child: Column(
           children: <Widget>[
             // Card blue part
             Container(
-              padding: const EdgeInsets.all(16.0),
-              decoration: const BoxDecoration(
+              padding: EdgeInsets.all(AppLayout.getHeight(16.0)),
+              decoration: BoxDecoration(
                 color: Color(0xFF526799),
                 borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(21.0),
-                  topLeft: Radius.circular(21.0),
+                  topRight: Radius.circular(AppLayout.getHeight(21.0)),
+                  topLeft: Radius.circular(AppLayout.getHeight(21.0)),
                 ),
               ),
               child: Column(
@@ -47,7 +47,7 @@ class TicketView extends StatelessWidget {
                         child: Stack(
                           children: <Widget>[
                             SizedBox(
-                              height: 24,
+                              height: AppLayout.getHeight(24.0),
                               child: LayoutBuilder(
                                 builder: (BuildContext context, BoxConstraints constraints) {
                                   return Flex(
@@ -85,12 +85,12 @@ class TicketView extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       SizedBox(
-                        width: 100,
+                        width: AppLayout.getWidth(100.0),
                         child: Text('${ticketList['from']['name']}', style: Styles.headLine4Style.copyWith(color: Colors.white)),
                       ),
                       Text('${ticketList['flying_time']}', style: Styles.headLine4Style.copyWith(color: Colors.white)),
                       SizedBox(
-                        width: 100,
+                        width: AppLayout.getWidth(100.0),
                         child: Text('${ticketList['to']['name']}', textAlign: TextAlign.end, style: Styles.headLine4Style.copyWith(color: Colors.white)),
                       ),
                     ],
@@ -103,10 +103,10 @@ class TicketView extends StatelessWidget {
               color: Styles.orangeColor,
               child: Row(
                 children: <Widget>[
-                  const SizedBox(
-                    width: 10.0,
-                    height: 20.0,
-                    child: DecoratedBox(
+                  SizedBox(
+                    width: AppLayout.getWidth(10.0),
+                    height: AppLayout.getHeight(20.0),
+                    child: const DecoratedBox(
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.only(topRight: Radius.circular(10.0), bottomRight: Radius.circular(10.0)),

@@ -6,6 +6,8 @@ import 'package:mental_health_application2/views/profile_screen.dart';
 import 'package:mental_health_application2/views/search_screen.dart';
 import 'package:mental_health_application2/views/ticket_screen.dart';
 
+// TODO make everything responsive with appLayout stuff
+
 void main() {
   runApp(const MyApp());
 }

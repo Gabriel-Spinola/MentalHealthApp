@@ -18,7 +18,7 @@ class CardsView extends StatelessWidget {
       margin: const EdgeInsets.only(right: 17.0, top: 5.0),
       padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 17.0),
       width: layoutSize.width * .6,
-      height: 350,
+      height: AppLayout.getHeight(350),
       decoration: BoxDecoration(
         color: Styles.primaryColor,
         borderRadius: BorderRadius.circular(24.0),
