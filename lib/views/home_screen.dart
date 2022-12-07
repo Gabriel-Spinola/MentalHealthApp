@@ -90,11 +90,8 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: const EdgeInsets.only(left: 20.0),
             scrollDirection: Axis.horizontal,
             child: Row(
-              children: const <Widget>[
-                TicketView(),
-                TicketView(),
-              ],
-            )
+              children: ticketList.map((ticket) => TicketView(ticketList: ticket)).toList(),
+            ),
           ),
           const Gap(15.0),
           Padding(

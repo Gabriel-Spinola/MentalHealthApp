@@ -7,7 +7,9 @@ import 'package:mental_health_application2/widgets/round_container.dart';
 import '../utils/app_styles.dart';
 
 class TicketView extends StatelessWidget {
-  const TicketView({Key? key}) : super(key: key);
+  final Map<String, dynamic> ticketList;
+
+  const TicketView({Key? key, required this.ticketList}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +37,7 @@ class TicketView extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text('NYC', style: Styles.headLine3Style.copyWith(color: Colors.white)),
+                      Text('${ticketList['from']['code']}', style: Styles.headLine3Style.copyWith(color: Colors.white)),
 
                       const Spacer(),
 
@@ -75,7 +77,7 @@ class TicketView extends StatelessWidget {
 
                       const Spacer(),
 
-                      Text('LDN', style: Styles.headLine3Style.copyWith(color: Colors.white)),
+                      Text('${ticketList['to']['code']}', style: Styles.headLine3Style.copyWith(color: Colors.white)),
                     ],
                   ),
                   const Gap(3.0),
@@ -84,12 +86,12 @@ class TicketView extends StatelessWidget {
                     children: <Widget>[
                       SizedBox(
                         width: 100,
-                        child: Text('New-York', style: Styles.headLine4Style.copyWith(color: Colors.white)),
+                        child: Text('${ticketList['from']['name']}', style: Styles.headLine4Style.copyWith(color: Colors.white)),
                       ),
-                      Text('8H 30M', style: Styles.headLine4Style.copyWith(color: Colors.white)),
+                      Text('${ticketList['flying_time']}', style: Styles.headLine4Style.copyWith(color: Colors.white)),
                       SizedBox(
                         width: 100,
-                        child: Text('London', textAlign: TextAlign.end, style: Styles.headLine4Style.copyWith(color: Colors.white)),
+                        child: Text('${ticketList['to']['name']}', textAlign: TextAlign.end, style: Styles.headLine4Style.copyWith(color: Colors.white)),
                       ),
                     ],
                   ),
@@ -167,7 +169,7 @@ class TicketView extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Text('1 MAY', style: Styles.headLine3Style.copyWith(color: Colors.white)),
+                          Text('${ticketList['date']}', style: Styles.headLine3Style.copyWith(color: Colors.white)),
                           const Gap(5.0),
                           Text('Date', style: Styles.headLine4Style.copyWith(color: Colors.white)),
                         ],
@@ -175,7 +177,7 @@ class TicketView extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
-                          Text('08:00 AM', style: Styles.headLine3Style.copyWith(color: Colors.white)),
+                          Text('${ticketList['departure_time']}', style: Styles.headLine3Style.copyWith(color: Colors.white)),
                           const Gap(5.0),
                           Text('Departure Time', style: Styles.headLine4Style.copyWith(color: Colors.white)),
                         ],
@@ -183,7 +185,7 @@ class TicketView extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: <Widget>[
-                          Text('23', style: Styles.headLine3Style.copyWith(color: Colors.white)),
+                          Text('${ticketList['number']}', style: Styles.headLine3Style.copyWith(color: Colors.white)),
                           const Gap(5.0),
                           Text('Number', style: Styles.headLine4Style.copyWith(color: Colors.white)),
                         ],
