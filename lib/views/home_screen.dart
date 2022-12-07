@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:mental_health_application2/utils/app_info_list.dart';
 import 'package:mental_health_application2/widgets/card_view.dart';
+import 'package:mental_health_application2/widgets/double_text_widget.dart';
 import 'package:mental_health_application2/widgets/ticket_view.dart';
 
 import '../routes/app_routes.dart';
@@ -70,18 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 const Gap(40.0),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Text('Consultorias', style: Styles.headLine2Style),
-                    InkWell(
-                      child: Text('View All', style: Styles.textStyle.copyWith(color: Styles.primaryColor)),
-                      onTap: () {
-                        print('tapped');
-                      },
-                    ),
-                  ],
-                )
+                const AppDoubleText(bigText: 'Upcoming Flights', smallText: 'View all'),
               ],
             ),
           ),
@@ -94,20 +84,9 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           const Gap(15.0),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Text('Aprenda', style: Styles.headLine2Style),
-                InkWell(
-                  child: Text('View All', style: Styles.textStyle.copyWith(color: Styles.primaryColor)),
-                  onTap: () {
-                    print('tapped');
-                  },
-                ),
-              ],
-            ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.0),
+            child: AppDoubleText(bigText: 'Aprenda', smallText: 'View all'),
           ),
           const Gap(15.0),
           SingleChildScrollView(
