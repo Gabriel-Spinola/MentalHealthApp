@@ -17,8 +17,8 @@ class _BottomBarState extends State<BottomBar> {
   static final List<String> _widgetOptions = <String>[
     AppRoutes.home,
     AppRoutes.search,
-    AppRoutes.ticket,
     AppRoutes.profile,
+    AppRoutes.ticket,
   ];
 
   void _onItemTapped(int index) {
@@ -52,11 +52,6 @@ class _BottomBarState extends State<BottomBar> {
             icon: Icon(FluentSystemIcons.ic_fluent_search_regular),
             activeIcon: Icon(FluentSystemIcons.ic_fluent_search_filled),
             label: 'Search'
-        ),
-        BottomNavigationBarItem(
-            icon: Icon(FluentSystemIcons.ic_fluent_ticket_regular),
-            activeIcon: Icon(FluentSystemIcons.ic_fluent_ticket_filled),
-            label: 'Ticket'
         ),
         BottomNavigationBarItem(
             icon: Icon(FluentSystemIcons.ic_fluent_person_regular),
