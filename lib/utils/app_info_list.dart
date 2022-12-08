@@ -44,7 +44,7 @@ List<Map<String, dynamic>> cardsList = [
   },
   {
     'image': 'three.jpg',
-    'place': 'Como lidar com o proximo',
+    'place': 'Como saber lidar com o proximo',
     'destination': 'Dubai',
     'price': 68
   },

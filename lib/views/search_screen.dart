@@ -22,7 +22,7 @@ class SearchScreen extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(20.0), vertical: AppLayout.getWidth(20.0)),
         children: <Widget>[
           Gap(AppLayout.getHeight(40.0)),
-          Text('What are \n you looking for?', style: Styles.headLine1Style.copyWith(fontSize: AppLayout.getWidth(35.0))),
+          Text('Oque você \nestá procurando?', style: Styles.headLine1Style.copyWith(fontSize: AppLayout.getWidth(35.0))),
           Gap(AppLayout.getHeight(20.0)),
           FittedBox(
             child: Container(
@@ -41,7 +41,7 @@ class SearchScreen extends StatelessWidget {
                       color: Colors.white,
                       borderRadius: BorderRadius.horizontal(left: Radius.circular(AppLayout.getHeight(50.0))),
                     ),
-                    child: const Center(child: Text('Airline Tickets')),
+                    child: const Center(child: Text('Profissionais')),
                   ),
                   // Hotels
                   Container(
@@ -51,7 +51,7 @@ class SearchScreen extends StatelessWidget {
                       color: Colors.transparent,
                       borderRadius: BorderRadius.horizontal(right: Radius.circular(AppLayout.getHeight(50.0))),
                     ),
-                    child: const Center(child: Text('Hotels')),
+                    child: const Center(child: Text('Saúde Mental')),
                   ),
                 ],
               ),
@@ -59,24 +59,13 @@ class SearchScreen extends StatelessWidget {
           ),
           Gap(AppLayout.getHeight(25.0)),
           const IconText(
-            text: 'Departure',
-            icon: Icons.flight_takeoff_rounded
+            text: 'Psicólogos',
+            icon: Icons.assignment_ind_rounded,
           ),
           Gap(AppLayout.getHeight(20.0)),
           const IconText(
-            text: 'Arrival',
-            icon: Icons.flight_land_rounded
-          ),
-          Gap(AppLayout.getHeight(25.0)),
-          Container(
-            padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(18.0), horizontal: AppLayout.getWidth(15.0)),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(AppLayout.getWidth(10.0)),
-              color: const Color(0xD91130CE),
-            ),
-            child: Center(
-              child: Text('Find Tickets', style: Styles.textStyle.copyWith(color: Colors.white)),
-            ),
+            text: 'Psiquiatras',
+            icon: Icons.emoji_people
           ),
           Gap(AppLayout.getHeight(40.0)),
           const AppDoubleText(bigText: 'Upcoming Flights', smallText: 'View all'),
@@ -110,7 +99,7 @@ class SearchScreen extends StatelessWidget {
                     ),
                     Gap(AppLayout.getHeight(12.0)),
                     Text(
-                      '20% discount on the early booking of this flight. Don\'t miss out of this chance!',
+                      '20% de desconto em nosso plano premium. Não perca essa chance!',
                       style: Styles.headLine2Style,
                     ),
                   ],
