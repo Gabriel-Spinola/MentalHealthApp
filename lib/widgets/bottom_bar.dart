@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:mental_health_application2/views/home_screen.dart';
 
 import '../routes/app_routes.dart';
+import '../utils/app_styles.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({Key? key}) : super(key: key);
@@ -38,7 +39,7 @@ class _BottomBarState extends State<BottomBar> {
       elevation: 10,
       showSelectedLabels: false,
       showUnselectedLabels: false,
-      selectedItemColor: Colors.blueGrey,
+      selectedItemColor: Styles.primaryColor,
       unselectedItemColor: const Color(0xFF526480),
       type: BottomNavigationBarType.fixed,
       items: const [

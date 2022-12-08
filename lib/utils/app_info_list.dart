@@ -1,50 +1,50 @@
 List<Map<String, dynamic>> ticketList = [
   {
     'from': {
-      'code': 'NYC',
-      'name': 'New-York',
+      'code': 'MG',
+      'name': 'Contagem',
     },
     'to': {
-      'code': 'LDN',
-      'name': 'London',
+      'code': 'PSI',
+      'name': 'Psicólogo',
     },
-    'flying_time': '8H 30M',
-    'date': '1 MAY',
-    'departure_time': '08:00 AM',
+    'flying_time': '2h de duração',
+    'date': 'Segunda',
+    'departure_time': '08:00',
     'number': 23,
   },
   {
     'from': {
-      'code': 'DK',
-      'name': 'Dhaka',
+      'code': 'SP',
+      'name': 'Iguaçú',
     },
     'to': {
-      'code': 'SH',
-      'name': 'Shanghai',
+      'code': 'PSQ',
+      'name': 'Psiquiatra',
     },
-    'flying_time': '4H 20M',
+    'flying_time': '1h de duração',
     'date': '1 MAY',
-    'departure_time': '09:00 AM',
+    'departure_time': '9:00',
     'number': 45,
   },
 ];
 
 List<Map<String, dynamic>> cardsList = [
   {
-    'image': 'one.png',
-    'place': 'Open Space',
+    'image': 'one.jpg',
+    'place': 'Como se abrir com mais facilidade',
     'destination': 'London',
     'price': 25
   },
   {
-    'image': 'two.png',
-    'place': 'Global Will',
+    'image': 'two.jpg',
+    'place': 'Oque fazer quando a vida não faz mais sentido',
     'destination': 'London',
     'price': 40
   },
   {
-    'image': 'three.png',
-    'place': 'Tallest Building',
+    'image': 'three.jpg',
+    'place': 'Como lidar com o proximo',
     'destination': 'Dubai',
     'price': 68
   },

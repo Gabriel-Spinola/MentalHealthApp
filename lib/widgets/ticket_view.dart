@@ -16,7 +16,7 @@ class TicketView extends StatelessWidget {
     final Size layoutSize = AppLayout.getSize(context);
 
     return SizedBox(
-      width: layoutSize.width * 0.9,
+      width: layoutSize.width * 0.94,
       height: AppLayout.getHeight(200.0),
       child: Container(
         margin: EdgeInsets.only(right: AppLayout.getHeight(16.0)),
@@ -27,7 +27,7 @@ class TicketView extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(AppLayout.getHeight(16.0)),
               decoration: BoxDecoration(
-                color: Color(0xFF526799),
+                color: const Color(0xFF526799),
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(AppLayout.getHeight(21.0)),
                   topLeft: Radius.circular(AppLayout.getHeight(21.0)),
@@ -69,7 +69,7 @@ class TicketView extends StatelessWidget {
                                 },
                               ),
                             ),
-                            Center(child: Transform.rotate(angle: 1.5, child: const Icon(Icons.local_airport_rounded, color: Colors.white))),
+                            Center(child: Transform.rotate(angle: 0, child: const Icon(Icons.person_rounded, color: Colors.white))),
                           ],
                         )
                       ),
@@ -171,7 +171,7 @@ class TicketView extends StatelessWidget {
                         children: <Widget>[
                           Text('${ticketList['date']}', style: Styles.headLine3Style.copyWith(color: Colors.white)),
                           const Gap(5.0),
-                          Text('Date', style: Styles.headLine4Style.copyWith(color: Colors.white)),
+                          Text('Funciona às', style: Styles.headLine4Style.copyWith(color: Colors.white)),
                         ],
                       ),
                       Column(
@@ -179,17 +179,9 @@ class TicketView extends StatelessWidget {
                         children: <Widget>[
                           Text('${ticketList['departure_time']}', style: Styles.headLine3Style.copyWith(color: Colors.white)),
                           const Gap(5.0),
-                          Text('Departure Time', style: Styles.headLine4Style.copyWith(color: Colors.white)),
+                          Text('Disponivel às', style: Styles.headLine4Style.copyWith(color: Colors.white)),
                         ],
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: <Widget>[
-                          Text('${ticketList['number']}', style: Styles.headLine3Style.copyWith(color: Colors.white)),
-                          const Gap(5.0),
-                          Text('Number', style: Styles.headLine4Style.copyWith(color: Colors.white)),
-                        ],
-                      )
                     ],
                   )
                 ],

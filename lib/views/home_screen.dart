@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       // Place the children aligned with the start side of the cross axis
                       children: <Widget>[
-                        Text('Good Morning', style: Styles.headLine3Style),
+                        Text('Bom dia!', style: Styles.headLine3Style),
                         const Gap(5.0),
                         Text('Book Tickets', style: Styles.headLine1Style),
                       ],
@@ -71,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 const Gap(40.0),
-                const AppDoubleText(bigText: 'Upcoming Flights', smallText: 'View all'),
+                const AppDoubleText(bigText: 'Professionais online', smallText: 'Veja mais'),
               ],
             ),
           ),
@@ -86,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
           const Gap(15.0),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.0),
-            child: AppDoubleText(bigText: 'Aprenda', smallText: 'View all'),
+            child: AppDoubleText(bigText: 'Aprenda', smallText: 'Veja mais'),
           ),
           const Gap(15.0),
           SingleChildScrollView(

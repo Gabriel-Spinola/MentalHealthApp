@@ -31,6 +31,8 @@ class CardsView extends StatelessWidget {
         ],
       ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        //crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Container(
             height: 180,
@@ -44,11 +46,7 @@ class CardsView extends StatelessWidget {
             ),
           ),
           const Gap(10.0),
-          Text('${card['place']}', style: Styles.headLine2Style.copyWith(color: Styles.kakiColor)),
-          const Gap(5.0),
-          Text('${card['destination']}', style: Styles.headLine3Style.copyWith(color: Colors.white)),
-          const Gap(8.0),
-          Text('\$${card['price']}/night', style: Styles.headLine1Style.copyWith(color: Styles.kakiColor)),
+          Center(child: Text('${card['place']}', style: Styles.headLine1Style.copyWith(color: Styles.kakiColor), textAlign: TextAlign.center)),
         ]
       ),
     );
