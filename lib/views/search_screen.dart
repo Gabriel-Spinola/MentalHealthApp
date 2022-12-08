@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:mental_health_application2/utils/app_layout.dart';
 import 'package:mental_health_application2/utils/app_styles.dart';
+import 'package:mental_health_application2/widgets/app_layout_builder.dart';
 import 'package:mental_health_application2/widgets/icon_text.dart';
 
 import '../Widgets/bottom_bar.dart';
@@ -195,6 +196,7 @@ class SearchScreen extends StatelessWidget {
               ),
             ],
           ),
+          Gap(AppLayout.getHeight(12.0)),
         ],
       ),
       bottomNavigationBar: const BottomBar(),
