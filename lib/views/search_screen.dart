@@ -68,7 +68,7 @@ class SearchScreen extends StatelessWidget {
             icon: Icons.emoji_people
           ),
           Gap(AppLayout.getHeight(40.0)),
-          const AppDoubleText(bigText: 'Upcoming Flights', smallText: 'View all'),
+          const AppDoubleText(bigText: 'Ofertas', smallText: 'Veja mais'),
           Gap(AppLayout.getHeight(15.0)),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -120,10 +120,10 @@ class SearchScreen extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text('Dicount\nfor survey', style: Styles.headLine2Style.copyWith(color: Colors.white)),
+                            Text('Desconto\nem consultas', style: Styles.headLine2Style.copyWith(color: Colors.white)),
                             Gap(AppLayout.getHeight(10.0)),
                             Text(
-                              'Take the survey about our service and get discount',
+                              'Cheque o nosso site e garanta o seu!',
                               style: Styles.headLine2Style.copyWith(
                                   fontWeight: FontWeight.w500,
                                   color: Colors.white,
@@ -158,7 +158,7 @@ class SearchScreen extends StatelessWidget {
                     ),
                     child: Column(
                       children: <Widget>[
-                        Text('Take Love', style: Styles.headLine2Style.copyWith(color: Colors.white), textAlign: TextAlign.center),
+                        Text('Receba Amor', style: Styles.headLine2Style.copyWith(color: Colors.white), textAlign: TextAlign.center),
                         Gap(AppLayout.getHeight(5.0)),
                         RichText(
                           text: const TextSpan(
